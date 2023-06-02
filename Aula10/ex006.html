@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+    <style>
+        div#area{
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: rgb(19, 134, 19);
+            color: white;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+            border-radius: 20px;
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.534);
+            border: 2px solid red;
+        }
+    </style>
+</head>
+<body>
+    <div id="area">
+        Interaja...
+    </div>
+
+    <script>
+        var area = window.document.getElementById('area')
+        area.addEventListener('click', clicar)
+        area.addEventListener('mouseenter', entrar)
+        area.addEventListener('mouseout', sair)
+        area.addEventListener('mousedown', segurou)
+        
+        function clicar(){
+            var area = window.document.getElementById('area')
+            area.innerText = 'Clicou!'
+            area.style.background = 'red'
+            area.style.borderColor = 'blue'
+        }
+
+        function entrar(){
+            var area = window.document.getElementById('area')
+            area.innerText = 'Entrou!'
+        }
+
+        function sair(){
+            var area = window.document.getElementById('area')
+            area.innerText = 'Saiu!'
+            area.style.background = 'green'
+            area.style.borderColor = 'red'
+        }
+
+        function segurou(){
+            var area = window.document.getElementById('area')
+            area.innerText = 'Segurou!'
+            area.style.background = 'blue'
+            area.style.borderColor = 'yellow'
+        }
+    </script>
+</body>
+</html>
