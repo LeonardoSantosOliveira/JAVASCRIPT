@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+    <style>
+        body{
+            margin: auto;
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <h1>Descobrindo nacionalidade</h1>
+    <input type="text" id="nacionalidade" placeholder="Nacionalidade">
+    <input type="button" value="Descobrir" id="botao">
+    <div id="local">
+
+    </div>
+
+    <script>
+        function descobrir(){
+            var pais = window.document.querySelector('input#nacionalidade').value
+            var res = window.document.querySelector('div#local')
+            res.innerHTML = `<br>Vivendo em ${pais}`
+
+            if (pais == 'Brasil' || pais == 'brasil' || pais == 'BRASIL'){
+                res.innerHTML += `<br>Você é <strong>Brasileiro!</strong>`
+            } else {
+                res.innerHTML += `<br>Você é <strong>Estrangeiro!</strong>`
+            }
+        }
+
+        var botao = window.document.querySelector('input#botao')
+        botao.addEventListener('click', descobrir)
+    </script>
+</body>
+</html>
