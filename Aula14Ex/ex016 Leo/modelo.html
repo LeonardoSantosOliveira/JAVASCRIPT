@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="estilo/style.css">
-    <title>Modelo de Exercício</title>
+    <title>Super Contador</title>
 </head>
 <body>
     <header>
@@ -13,12 +13,13 @@
     </header>
     <section>
         <div id="dados">
-            
+            <p><label for="txti">Início: </label> <input type="number" name="inicio" id="txti"></p>
+            <p><label for="txtf">Fim: </label><input type="number" name="fim" id="txtf"></p>
+            <p><label for="txtp">Passo: </label><input type="number" name="passo" id="txtp"></p>
+            <p><input type="button" value="Contar" onclick="contar()"></p>
         </div>
-        <div id="resultado">
-            <p>Início: </p>
-            <p>Fim: </p>
-            <p>Passo: </p>
+        <div id="res">
+            Preparando a contagem...
         </div>
     </section>
     <footer>
